@@ -45,6 +45,18 @@ li.nav2 a:active {
 
 
 
+ol li {
+  background-color: #f0e4d7;
+  padding: 20px;
+  border-left: 5px solid #a67c52;
+  border-radius: 3px;
+  font-size: 20px;
+  text-align: left;
+  list-style-position: inside; /* moves number inside box */
+  margin-bottom: 10px;
+}
+
+
 
     h1, h2 {
 
@@ -107,6 +119,14 @@ li.nav2 a:active {
     ol, ul {
 
       margin-left: 50px;
+	  list-style-position: inside;
+	        font-size: 25px;
+
+      margin-top: 25px;
+
+      border-bottom: 2px solid #a67c52;
+
+      padding-bottom: 5px;
 
     }
 
@@ -152,21 +172,29 @@ li.nav2 a:active {
 
 
 
-    ol li h1 {
+    ol {
+  list-style-position: inside;
+  counter-reset: section;
+  padding-left: 0;
+}
 
-      background-color: #f0e4d7;
+ol li {
+  counter-increment: section;
+  background-color: #f0e4d7;
+  border-left: 5px solid #a67c52;
+  border-radius: 3px;
+  padding: 15px 20px;
+  margin: 10px 0;
+  font-size: 20px;
+  position: relative;
+}
 
-      padding: 20px;
+ol li::before {
+  content: counter(section) ". ";
+  font-weight: bold;
+  color: #4a2c2a;
+}
 
-      border-left: 5px solid #a67c52;
-
-      border-radius: 3px;
-
-      font-size: 20px;
-
-      text-align: left;
-
-    }
 
 
 
@@ -228,7 +256,10 @@ ul li a:hover {
   <li class="nav2"><a href="AP.html">Ap</a></li>
 </ul>
 
-<h1>    Gabriel Jim B. Tabile    <br> 9-Family </h1>
+<ol>
+
+<li> <h1>    Gabriel Jim B. Tabile </h1> </li>   <li> <h1> 9-Family </h1></li>
+</ol>
 <h2>     Portfolio in 2nd Quarter AP  </h2>
 
 <hr>
@@ -250,7 +281,7 @@ ul li a:hover {
 
 
 
-<li> <h1> Banas ng Demand: </h1></li>
+<li> <h1> Batas ng Demand: Ang Kaugnayan ng Presyo sa Demand</h1></li>
 
 <ul>
 <li><p> Tumataas ang presyo = bababa ang demand </p></li>
